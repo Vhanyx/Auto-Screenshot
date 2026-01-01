@@ -10,14 +10,14 @@ const { chromium } = require('playwright');
 //Await promise to navigate to duckduckgo
     await page.goto('https://duckduckgo.com/');
     const searchBox = page.locator('input[name="q"]');
-    await searchBox.fill('Rocket Raccon Marvel', delay = 100);
+    await searchBox.fill('Rocket Raccoon Marvel', delay = 100);
     await searchBox.press('Enter');
 // Click the first search result
     const firstResult = page.locator("#r1-0").first();
     await firstResult.click();
     await page.waitForLoadState('domcontentloaded');
 // Take screenshot after navigation    
-    await page.screenshot({ path: './Screenshots/rocket-racoon.png', fullPage: false });
+    await page.screenshot({ path: './Screenshots/rocket-raccoon.png', fullPage: false });
 
     await browser.close();
 })();
