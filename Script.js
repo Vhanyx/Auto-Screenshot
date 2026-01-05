@@ -13,12 +13,12 @@ async function runAutomation() {
     await searchBox.press('Enter');
 // Click the first search result
     const firstResult = page.locator("#r1-0").first();
-    await firstResult.click();
+    await firstResult.click(); 
     await page.waitForLoadState('domcontentloaded');
 // Take screenshot after navigation    
     await page.screenshot({ path: './Screenshots/rocket-raccoon.png', fullPage: false });
 
     await browser.close();
 }
-
+ 
 runAutomation();
